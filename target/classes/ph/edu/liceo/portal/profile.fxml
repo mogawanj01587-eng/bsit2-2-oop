@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ph.edu.liceo.portal.controller.ProfileController"
+            styleClass="profile-root">
+
+    <top>
+        <VBox alignment="CENTER" spacing="8" styleClass="profile-header">
+            <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+            <Label text="STUDENT PROFILE" styleClass="header-subtitle"/>
+            <!-- TODO 11: initialsLabel -->
+            <Label fx:id="initialsLabel" styleClass="initials-circle"/>
+            <!-- TODO 11: nameLabel -->
+            <Label fx:id="nameLabel" styleClass="student-name"/>
+        </VBox>
+    </top>
+
+    <center>
+        <GridPane hgap="12" vgap="12" alignment="CENTER">
+            <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+            <Label text="Student No.:" GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="detail-label"/>
+            <!-- TODO 11: studentNoLabel -->
+            <Label fx:id="studentNoLabel" GridPane.columnIndex="1" GridPane.rowIndex="0" styleClass="detail-value"/>
+
+            <Label text="Course:" GridPane.columnIndex="0" GridPane.rowIndex="1" styleClass="detail-label"/>
+            <!-- TODO 11: courseLabel -->
+            <Label fx:id="courseLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" styleClass="detail-value"/>
+
+            <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="2" styleClass="detail-label"/>
+            <!-- TODO 11: emailLabel -->
+            <Label fx:id="emailLabel" GridPane.columnIndex="1" GridPane.rowIndex="2" styleClass="detail-value"/>
+        </GridPane>
+    </center>
+
+    <bottom>
+        <VBox alignment="CENTER">
+            <padding><Insets top="15" right="20" bottom="25" left="20"/></padding>
+            <Button text="LOG OUT" maxWidth="Infinity" styleClass="primary" onAction="#handleLogout"/>
+        </VBox>
+    </bottom>
+
+</BorderPane>
